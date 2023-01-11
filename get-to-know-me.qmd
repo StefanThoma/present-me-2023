@@ -1,0 +1,44 @@
+---
+title: "Get To Know"
+author: "Stefan Thoma"
+format: revealjs
+---
+
+# Personal
+
+
+## Family
+
+## Hobbies
+
+- Woodworking & Woodturning
+
+- Reading (fiction)
+
+- Painting
+
+- Photography
+
+- Coffee
+
+# Professional
+
+## Education
+
+## Teaching
+
+## Research
+
+# Project
+
+## Background
+
+## Aim
+
+## Method
+
+## Findings
+
+## Conclusion
+
+
