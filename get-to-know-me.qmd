@@ -6,39 +6,74 @@ format: revealjs
 
 # Personal
 
-
 ## Family
+
+![](images/Stefan&Leo.JPG)
 
 ## Hobbies
 
-- Woodworking & Woodturning
+-   Woodworking & Woodturning
 
-- Reading (fiction)
+-   Reading fiction
 
-- Painting
+-   Painting
 
-- Photography
+-   Photography
 
-- Coffee
+-   Coffee
+
+    -    GrindMyBeans
 
 # Professional
 
 ## Education
 
+-   MSc Cognitive Psychology & Methods in Bern till 2018
+
+-   MSc Statistics at ETHZ till 2021
+
 ## Teaching
+
+-   Statistics and R to psychology students and faculty at Uni Bern and at Roche
+
+-   Links to materials
 
 ## Research
 
+-   Melting glaciers in VR
+
 # Project
+
+Master Thesis in Statistics
+
+Supervised by Werner Stahel and Martin Mächler
 
 ## Background
 
+### Reproducibility Crisis in Psychology
+
+-   Problems
+
+-   ManyLabs studies
+
+### Measure of Relevance
+
+-   Simple alternative to p-values
+
+-   
+
 ## Aim
+
+-   Implement relevance measure to ManyLabs studies.
+
+-   Were original studies relevant?
+
+-   Could studies be replicated?
+
+-   
 
 ## Method
 
 ## Findings
 
 ## Conclusion
-
-
