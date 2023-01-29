@@ -2,19 +2,41 @@
 title: "Get To Know"
 author: "Stefan Thoma"
 format: revealjs
+bibliography: references.bib
 ---
 
 # Personal
 
-## Family
+## Family {auto-animate="true"}
+
+```{r}
+mapdf <- tibble::tibble(town = c("Bern", "Zürich", "Gelterkinden"),
+                        lng = c(7.44744, 8.55, 7.85658),
+                        lat = c(46.94809, 47.36667, 47.46471))
+
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=mapdf$lng[1], lat=mapdf$lat[1]) %>% 
+  addMarkers(lng=mapdf$lng[2], lat=mapdf$lat[2])
+```
+
+## Family {auto-animate="true"}
+
+```{r}
+library(leaflet)
+leaflet() %>%
+  addTiles() %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=mapdf$lng[2], lat=mapdf$lat[2], popup="Impartant places")
+```
 
 ![](images/Stefan&Leo.JPG)
 
-## Hobbies
+## Free Time
 
 -   Woodworking & Woodturning
 
--   Reading fiction
+    -   Volunteering at Workshop
 
 -   Painting
 
@@ -22,25 +44,35 @@ format: revealjs
 
 -   Coffee
 
-    -   GrindMyBeans
-
 # Professional
 
 ## Education
 
--   MSc Cognitive Psychology & Methods in Bern till 2018
+-   MSc Cognitive Psychology & Methods in Bern
+    -   Melting glaciers in VR
+    -   Published January 2023 in Frontiers in Psychology special edition
+-   MSc Statistics at ETHZ
+    -   Relevance in ManyLabs studies
 
--   MSc Statistics at ETHZ till 2021
+## Previous Work
 
-## Teaching
+-   Teaching Statistics and R to psychology students and faculty
 
--   Statistics and R to psychology students and faculty at Uni Bern and at Roche
+-   Creating teaching materials
 
--   Links to materials
+## At Roche
 
-## Research
+-   Intern since November
 
--   Melting glaciers in VR
+    -   Ease the switch from SAS to R
+
+-   Introduction to Teal Materials
+
+-   Part of Admiral Hackathon Team
+
+    -   Upload Data App
+
+    -   Introduction to R Workshop (\>500 Participants)
 
 # Project
 
@@ -52,28 +84,46 @@ Supervised by Werner Stahel and Martin Mächler
 
 ### Reproducibility Crisis in Psychology
 
--   Problems
+-   Challanges
 
 -   ManyLabs studies
 
 ### Measure of Relevance
 
--   Simple alternative to p-values
+-   Alternative to p-values by @stahel2021
 
--   
+-   Defined as:
+
+    $$
+    Rle = \frac{\hat{\theta}}{\zeta}
+    $$
+
+    ![Relevance Categories](images/categories.pdf)
 
 ## Aim
 
 -   Implement relevance measure to ManyLabs studies.
 
--   Were original studies relevant?
+-   #Were original studies relevant?
 
--   Could studies be replicated?
+-   #Could studies be replicated?
+
+## Approach
+
+-   R Package for replicability
 
 -   
 
-## Method
-
 ## Findings
 
-## Conclusion
+-   
+
+## My Learning Journey
+
+-   Separate Data from Results
+
+-   Don't reinvent the wheel (use existing code-base)
+
+-   Reduce dependencies
+
+-   
