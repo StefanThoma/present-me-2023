@@ -7,28 +7,19 @@ bibliography: references.bib
 
 # Personal
 
-## Family {auto-animate="true"}
-
 ```{r}
-mapdf <- tibble::tibble(town = c("Bern", "Zürich", "Gelterkinden"),
-                        lng = c(7.44744, 8.55, 7.85658),
-                        lat = c(46.94809, 47.36667, 47.46471))
+mapdf <- tibble::tibble(town = c("University Bern", "ETH Zürich", "Gelterkinden", "Roche"),
+                        lng = c(7.4381, 8.5476, 7.85658, 7.6025032),
+                        lat = c(46.9505, 47.3764, 47.46471, 47.559459))
 
 library(leaflet)
 leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=mapdf$lng[1], lat=mapdf$lat[1]) %>% 
-  addMarkers(lng=mapdf$lng[2], lat=mapdf$lat[2])
+    addProviderTiles(providers$OpenStreetMap.CH) %>%
+  #?addTiles(urlTemplate = ) %>%  # Add default OpenStreetMap map tiles
+  addMarkers(lng=mapdf$lng, lat=mapdf$lat, label = mapdf$town)
 ```
 
 ## Family {auto-animate="true"}
-
-```{r}
-library(leaflet)
-leaflet() %>%
-  addTiles() %>%  # Add default OpenStreetMap map tiles
-  addMarkers(lng=mapdf$lng[2], lat=mapdf$lat[2], popup="Impartant places")
-```
 
 ![](images/Stefan&Leo.JPG)
 
@@ -49,68 +40,110 @@ leaflet() %>%
 ## Education
 
 -   MSc Cognitive Psychology & Methods in Bern
-    -   Melting glaciers in VR
-    -   Published January 2023 in Frontiers in Psychology special edition
+    -   Increasing awareness of climate change with immersive virtual reality @thoma2023.
+    -   Accepted January 2023 in Frontiers in Psychology \| Frontiers in Virtual Reality
 -   MSc Statistics at ETHZ
     -   Relevance in ManyLabs studies
 
-## Previous Work
+## Previous (relevant) Work
 
--   Teaching Statistics and R to psychology students and faculty
-
+::: columns
+::: {.column width="50%"}
+-   Teaching
+    -   Statistics, R, and reproducible research
+    -   to students and faculty
+    -   since \~ 2017
 -   Creating teaching materials
+-   Statistical and R consulting
+:::
+
+::: {.column width="50%"}
+<iframe src="https://methodenlehre.github.io/Statistik-IV-quarto/" title="*Statistik IV* lecture material" width="960" height="500">
+
+</iframe>
+:::
+:::
 
 ## At Roche
 
--   Intern since November
+::: columns
+::: {.column width="50%"}
+<!-- -   Intern since November -->
 
-    -   Ease the switch from SAS to R
+<!--     -   Ease the switch from SAS to R -->
 
 -   Introduction to Teal Materials
 
--   Part of Admiral Hackathon Team
+-   Part of the Admiral Hackathon
 
-    -   Upload Data App
+    -   Introduction to R (\>500 Participants)
 
-    -   Introduction to R Workshop (\>500 Participants)
+    -   Registration & Submission App
+:::
+
+::: {.column width="50%"}
+<iframe src="https://zxqguo-stefan0pascal-thoma.shinyapps.io/data_upload/" title="Admiral Hackathon App" width="960" height="500">
+
+</iframe>
+:::
+:::
+
+## Why ADS?
+
+-   Work with Substance <!-- Being part of the drug development process is very meaningful to me personally. -->
+-   Work as part of a team towards a shared goal <!-- Not how it is in academia -->
+-   Switch to R
+    -   Low barrier of entry
+    -   Cocreate workflows and envirnments
+    -   Participate / Lead the shift in this industry
 
 # Project
 
 Master Thesis in Statistics
 
+NAME
+
 Supervised by Werner Stahel and Martin Mächler
 
-## Background
+## Reproducibility Crisis in Psychology
 
-### Reproducibility Crisis in Psychology
+![Estimated replication scores by @youyou2023](images/replication_score.jpg)
 
--   Challanges
+## ManyLabs Studies
 
--   ManyLabs studies
+-   Replication of priming study
+-   N = 884
+-   9 locations / teams
 
-### Measure of Relevance
+## Measure of Relevance
 
 -   Alternative to p-values by @stahel2021
 
--   Defined as:
+$Rle = \frac{\hat{\theta}}{\zeta}$
 
-    $$
-    Rle = \frac{\hat{\theta}}{\zeta}
-    $$
-
-    ![Relevance Categories](images/categories.pdf)
+![Relevance Categories](images/categories.pdf)
 
 ## Aim
 
--   Implement relevance measure to ManyLabs studies.
+-   Implement Relevance measure to ManyLabs studies <!-- but really: write a good thesis -->
 
--   #Were original studies relevant?
+-   Create a reproducible and neat analysis pipeline
 
--   #Could studies be replicated?
+    -   Many similar analyses
+    -   Avoid repetition
+
+-   Build foundation for future research
 
 ## Approach
 
--   R Package for replicability
+-   R Package for reproducibility
+
+```{r}
+#remotes::install_github("StefanThoma/ReplicationRelevance")
+library(ReplicationRelevance)
+```
+
+## Approach
 
 -   
 
@@ -126,4 +159,4 @@ Supervised by Werner Stahel and Martin Mächler
 
 -   Reduce dependencies
 
--   
+# References
