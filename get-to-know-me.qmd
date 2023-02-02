@@ -42,7 +42,7 @@ leaflet() %>%
 -   MSc Cognitive Psychology & Methods in Bern
     -   Increasing awareness of climate change with immersive virtual reality @thoma2023.
     -   Accepted January 2023 in Frontiers in Psychology \| Frontiers in Virtual Reality
--   MSc Statistics at ETHZ
+-   MSc Statistics at ETHZ (december 2021)
     -   Relevance in ManyLabs studies
 
 ## Previous (relevant) Work
@@ -58,9 +58,15 @@ leaflet() %>%
 :::
 
 ::: {.column width="50%"}
+::: panel-tabset
+### Statistik IV
+
 <iframe src="https://methodenlehre.github.io/Statistik-IV-quarto/" title="*Statistik IV* lecture material" width="960" height="500">
 
 </iframe>
+
+### Intro to R
+:::
 :::
 :::
 
@@ -94,38 +100,106 @@ leaflet() %>%
 -   Work as part of a team towards a shared goal <!-- Not how it is in academia -->
 -   Switch to R
     -   Low barrier of entry
-    -   Cocreate workflows and envirnments
-    -   Participate / Lead the shift in this industry
+    -   Co create workflows and environments
+    -   Participate the shift in this industry
 
 # Project
 
-Master Thesis in Statistics
+## Estimating Relevance within Replication Studies
 
-NAME
+- Masters Thesis in Statistics
 
-Supervised by Werner Stahel and Martin Mächler
+- Apply the concept of Relevance to large scale replication studies. 
+
+::: aside
+Supervised by Prof. em. Dr. Werner Stahel and Prof. Dr. Martin Mächler
+:::
+
+::: notes
+
+I chose to focus on the intersection area between statistics and psychology for my masters thesis in statistics.
+
+My thesis was supervised by Werner Stahel and Martin Mächler. 
+And the goal was to apply the novel concept of the relevance parameter to three large scale replication studies. 
+Today, I will be focusing on one particular replication study -- for the sake of brevity. 
+
+In particular, I want to talk about how I implemented this analysis and what I would do differently now.
+
+But first, I want to give you a little bit of background:
+
+
+:::
 
 ## Reproducibility Crisis in Psychology
 
 ![Estimated replication scores by @youyou2023](images/replication_score.jpg)
 
-## ManyLabs Studies
+::: notes
+So, it is estimated that less than half of psychology studies of the past 20 years are reproducible.
+This means that many of the psychological phenomena we learned about are not real or at least much less impactful than the literature might suggest. 
 
--   Replication of priming study
--   N = 884
--   9 locations / teams
+This may be due to many factors, such as publication bias, poor research practices, or from a misunderstanding on p-values. 
+
+::: 
+
+## Albarracin replication study
+
+- Activity `priming` should lead to better `score` than inactivity priming
+
+- Original: 
+
+- Replication by @:
+  - N = 884
+  - 9 locations & teams
+
+::: notes
+
+The Albarracin study investigated the effect of priming on SAT-like test scores. 
+The protocol of the replication study was co-developed by the original authors and was administered to 884 participants across 9 locations and investigations.
+Distributing participants across different sites allowed for the estimation of effect heterogeneity. 
+
+The effect of interest in this case was the standardised mean difference in scores across the two groups. 
+
+So this replication data is the focus of my study.
+
+:::
 
 ## Measure of Relevance
 
 -   Alternative to p-values by @stahel2021
 
-$Rle = \frac{\hat{\theta}}{\zeta}$
+-   $Rle = \frac{\hat{\theta}}{\zeta}$
 
-![Relevance Categories](images/categories.pdf)
+![Relevance Categories](images/categories.png)
 
-## Aim
+::: notes
+Let's talk about this Relevance parameter. 
+So, the parameter was designed by Werner Stahel to be an alternative to p-values.
+You simply take the parameter of interest, in this case the standardised mean difference between the two groups, and you divide it by the minimally relevant effect size. 
+Relevance ranges now between - infinite and + infinite. 
+With a directed hypothesis a Relevance larger than 1 represents a relevant effect. 
 
--   Implement Relevance measure to ManyLabs studies <!-- but really: write a good thesis -->
+While p-values mostly represent estimation certainty / accuracy, the relevance parameter also encodes information of effect magnitude. 
+The formula in the slide is for the estimated relevance Rle. 
+We can then create a confidence interval around our estimate, with which we can express certainty of our estimation. 
+
+This leads us to the different relevance categorizations: 
+Best case scenario: the CI is to the right of our relevance threshold. 
+Worst case: the upper bound of our CI is negative.
+
+
+Mention: 
+units of relevance are in units of minimally relevant effectsize
+strongly related to equivalence testing
+problem if expected effect is very close to the minimally relevant effect.
+
+For this study zeta was .1
+:::
+
+
+## Task
+
+-   Implement Relevance measure to replication studies <!-- but really: write a good thesis -->
 
 -   Create a reproducible and neat analysis pipeline
 
@@ -134,29 +208,190 @@ $Rle = \frac{\hat{\theta}}{\zeta}$
 
 -   Build foundation for future research
 
-## Approach
 
--   R Package for reproducibility
+::: notes
+My goal was to implement the Relevance measure to replication studies. 
+
+In reality, my goal was to write a good thesis -- which I did write in R. 
+
+As many analysis processes are repeated often, and I wanted to avoid duplicate code. 
+This was especially crucial for me during the development where small adjustments would have meant to change code in many places. 
+
+It was also important to me to make the code easily reusable, also by others. 
+
+:::
+
+## Approach {auto-animate="true"}
 
 ```{r}
+#| code-line-numbers: "2"
+#| echo: true
+
 #remotes::install_github("StefanThoma/ReplicationRelevance")
 library(ReplicationRelevance)
 ```
 
-## Approach
+- R Package facilitates
+  - documentation
+  - writing generalized code
+  
+- Can include Data
 
--   
+- Complete & reproducible data analysis package
 
-## Findings
 
--   
+::: notes
+
+The (maybe) obvious solution was to write an R package that can be hosted on GitHub.
+
+Writing an R package allowed me to adopt certain R-package standards. 
+This includes writing extensive (roxigen) documentation, thinking about code dependencies, 
+
+:::
+
+
+
+## Approach {auto-animate="true"}
+
+```{r}
+#| code-line-numbers: "4,5"
+#| echo: true
+#| eval: false
+
+#remotes::install_github("StefanThoma/ReplicationRelevance")
+library(ReplicationRelevance)
+
+# S4 study object
+study <- setClass("study",
+                  slots = list(
+                    name = "character",
+                    manyLabs = "character",
+                    data.revised = "data.frame",
+                    data.replication = "data.frame",
+                    original = "list",
+                    variables = "list",
+                    var.of.interest = "character",
+                    relevance.threshold = "numeric",
+                    family = "character",
+                    mixedModels = "list",
+                    table = "data.frame",
+                    difference.table = "list"
+                  )
+)
+```
+
+
+::: notes
+My idea was to create one object for each study which will contain both the data and the results. 
+This way, I could run the analysis script, export my study objects, and then import them to my thesis document. 
+This would allow me to write the thesis parallel to developing the functionality in my package: 
+
+I could simply rerun the analysis script and subsequently rerun my thesis script, without any importing adjustments. 
+:::
+
+## Approach {auto-animate="true"}
+
+```{.r code-line-numbers="1,2|4,5|10"}
+alb5 <- new("study", 
+            name = "alb5", 
+            manyLabs = "ml5",
+            data.revised = as.data.frame(alb5_rev), 
+            data.replication = as.data.frame(alb5_rep),
+            original = list(m.1 = 12.83, sd.1 = 1.86, n.1 = 18, 
+                            m.2 = 10.78, sd.2 = 3.15, n.2 = 18), 
+            variables = list("dv" = "SATTotal", 
+                             "iv" = "Condition", 
+                             "measure" = "SMD"),
+            var.of.interest = "Condition",
+            relevance.threshold = .1,
+            family = "gaussian"
+```
+
+## Approach {auto-animate="true"}
+
+``` {.r code-line-numbers="16,17|19,20|22,23"}
+alb5 <- new("study", 
+            name = "alb5", 
+            manyLabs = "ml5",
+            data.revised = as.data.frame(alb5_rev), 
+            data.replication = as.data.frame(alb5_rep),
+            original = list(m.1 = 12.83, sd.1 = 1.86, n.1 = 18, 
+                            m.2 = 10.78, sd.2 = 3.15, n.2 = 18), 
+            variables = list("dv" = "SATTotal", 
+                             "iv" = "Condition", 
+                             "measure" = "SMD"),
+            var.of.interest = "Condition",
+            relevance.threshold = .1,
+            family = "gaussian"
+            
+# Fit mixed model
+alb5@mixedModels <- MixedModels.study(alb5)
+
+# Check model diagnostics
+diagnosticPlot.study(alb5)
+
+# Create outcome table
+alb5@table <- relevance_table.study(alb5)
+```
+
+## Results
+
+``` {.r code-line-numbers="24"}
+alb5 <- new("study", 
+            name = "alb5", 
+            manyLabs = "ml5",
+            data.revised = as.data.frame(alb5_rev), 
+            data.replication = as.data.frame(alb5_rep),
+            original = list(m.1 = 12.83, sd.1 = 1.86, n.1 = 18, 
+                            m.2 = 10.78, sd.2 = 3.15, n.2 = 18), 
+            variables = list("dv" = "SATTotal", 
+                             "iv" = "Condition", 
+                             "measure" = "SMD"),
+            var.of.interest = "Condition",
+            relevance.threshold = .1,
+            family = "gaussian"
+            
+# Fit mixed model
+alb5@mixedModels <- MixedModels.study(alb5)
+
+# Check model diagnostics
+diagnosticPlot.study(alb5)
+
+# Create outcome table
+alb5@table <- relevance_table.study(alb5)
+
+plot_both.study(alb5) {auto-animate="true"}
+```
+
+## Results
+
+![Relevance results](images/alb.png)
+
+::: notes
+The statistical model used was a mixed effects model to allow for effect heterogeneity between the different locations.
+
+As we can see here, the original study showed a high value of its estimated relevance of 7.75. 
+However, this came with a large confidence band. Still, the effect appeared to be relevant. 
+
+Overall, in a traditional setting, the replication would be considered successful because the fixed effect of priming was significant. 
+In my opinion the picture is much less clear.
+Just one of the nine locations showed a significant effect while none could replicate the relevance of the original study.
+Further, 
+
+
+:::
 
 ## My Learning Journey
+
+-   Modularize code more
 
 -   Separate Data from Results
 
 -   Don't reinvent the wheel (use existing code-base)
 
 -   Reduce dependencies
+
+::: notes
+:::
 
 # References

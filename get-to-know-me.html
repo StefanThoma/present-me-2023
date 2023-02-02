@@ -7,7 +7,7 @@
 <link href="get-to-know-me_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="get-to-know-me_files/libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="get-to-know-me_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.2.269">
+  <meta name="generator" content="quarto-1.1.189">
 
   <meta name="author" content="Stefan Thoma">
   <title>Get To Know</title>
@@ -28,6 +28,70 @@
       margin: 0 0.8em 0.2em -1.6em;
       vertical-align: middle;
     }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
     div.csl-bib-body { }
     div.csl-entry {
       clear: both;
@@ -337,7 +401,7 @@
       margin-right: 0; 
     }
   </style>
-  <script src="get-to-know-me_files/libs/htmlwidgets-1.6.1/htmlwidgets.js"></script>
+  <script src="get-to-know-me_files/libs/htmlwidgets-1.5.4/htmlwidgets.js"></script>
   <script src="get-to-know-me_files/libs/jquery-1.12.4/jquery.min.js"></script>
   <link href="get-to-know-me_files/libs/leaflet-1.3.1/leaflet.css" rel="stylesheet">
   <script src="get-to-know-me_files/libs/leaflet-1.3.1/leaflet.js"></script>
@@ -353,25 +417,18 @@
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" class="quarto-title-block center">
+<section id="title-slide" class="center">
   <h1 class="title">Get To Know</h1>
-
-<div class="quarto-title-authors">
-<div class="quarto-title-author">
-<div class="quarto-title-author-name">
-Stefan Thoma 
-</div>
-</div>
-</div>
-
+  <p class="author">Stefan Thoma</p>
 </section>
+
 <section>
 <section id="personal" class="title-slide slide level1 center">
 <h1>Personal</h1>
 <div class="cell">
 <div class="cell-output-display">
-<div class="leaflet html-widget html-fill-item-overflow-hidden html-fill-item" id="htmlwidget-60513549e51985f70025" style="width:960px;height:480px;"></div>
-<script type="application/json" data-for="htmlwidget-60513549e51985f70025">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap.CH",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[46.9505,47.3764,47.46471,47.559459],[7.4381,8.5476,7.85658,7.6025032],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["University Bern","ETH Zürich","Gelterkinden","Roche"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[46.9505,47.559459],"lng":[7.4381,8.5476]}},"evals":[],"jsHooks":[]}</script>
+<div id="htmlwidget-2e7e28b246f03e4fa498" style="width:960px;height:480px;" class="leaflet html-widget"></div>
+<script type="application/json" data-for="htmlwidget-2e7e28b246f03e4fa498">{"x":{"options":{"crs":{"crsClass":"L.CRS.EPSG3857","code":null,"proj4def":null,"projectedBounds":null,"options":{}}},"calls":[{"method":"addProviderTiles","args":["OpenStreetMap.CH",null,null,{"errorTileUrl":"","noWrap":false,"detectRetina":false}]},{"method":"addMarkers","args":[[46.9505,47.3764,47.46471,47.559459],[7.4381,8.5476,7.85658,7.6025032],null,null,null,{"interactive":true,"draggable":false,"keyboard":true,"title":"","alt":"","zIndexOffset":0,"opacity":1,"riseOnHover":false,"riseOffset":250},null,null,null,null,["University Bern","ETH Zürich","Gelterkinden","Roche"],{"interactive":false,"permanent":false,"direction":"auto","opacity":1,"offset":[0,0],"textsize":"10px","textOnly":false,"className":"","sticky":true},null]}],"limits":{"lat":[46.9505,47.559459],"lng":[7.4381,8.5476]}},"evals":[],"jsHooks":[]}</script>
 </div>
 </div>
 </section>
@@ -404,7 +461,7 @@ Stefan Thoma
 <li>Increasing awareness of climate change with immersive virtual reality <span class="citation" data-cites="thoma2023">Thoma et al. (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span>.</li>
 <li>Accepted January 2023 in Frontiers in Psychology |&nbsp;Frontiers in Virtual Reality</li>
 </ul></li>
-<li>MSc Statistics at ETHZ
+<li>MSc Statistics at ETHZ (december 2021)
 <ul>
 <li>Relevance in ManyLabs studies</li>
 </ul></li>
@@ -425,8 +482,18 @@ Stefan Thoma
 <li>Statistical and R consulting</li>
 </ul>
 </div><div class="column" style="width:50%;">
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Statistik IV</a></li><li><a href="#tabset-1-2">Intro to R</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
 <iframe src="https://methodenlehre.github.io/Statistik-IV-quarto/" title="*Statistik IV* lecture material" width="960" height="500">
 </iframe>
+</div>
+<div id="tabset-1-2">
+
+</div>
+</div>
+</div>
 </div>
 </div>
 </section>
@@ -458,47 +525,115 @@ Stefan Thoma
 <li>Switch to R
 <ul>
 <li>Low barrier of entry</li>
-<li>Cocreate workflows and envirnments</li>
-<li>Participate / Lead the shift in this industry</li>
+<li>Co create workflows and environments</li>
+<li>Participate the shift in this industry</li>
 </ul></li>
 </ul>
 </section></section>
 <section>
 <section id="project" class="title-slide slide level1 center">
 <h1>Project</h1>
-<p>Master Thesis in Statistics</p>
-<p>NAME</p>
-<p>Supervised by Werner Stahel and Martin Mächler</p>
+
 </section>
+<section id="estimating-relevance-within-replication-studies" class="slide level2">
+<h2>Estimating Relevance within Replication Studies</h2>
+<ul>
+<li><p>Masters Thesis in Statistics</p></li>
+<li><p>Apply the concept of Relevance to large scale replication studies.</p></li>
+</ul>
+
+<aside class="notes">
+<p>I chose to focus on the intersection area between statistics and psychology for my masters thesis in statistics.</p>
+<p>My thesis was supervised by Werner Stahel and Martin Mächler. And the goal was to apply the novel concept of the relevance parameter to three large scale replication studies. Today, I will be focusing on one particular replication study – for the sake of brevity.</p>
+<p>In particular, I want to talk about how I implemented this analysis and what I would do differently now.</p>
+<p>But first, I want to give you a little bit of background:</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<aside><div>
+<p>Supervised by Prof.&nbsp;em. Dr.&nbsp;Werner Stahel and Prof.&nbsp;Dr.&nbsp;Martin Mächler</p>
+</div></aside></section>
 <section id="reproducibility-crisis-in-psychology" class="slide level2">
 <h2>Reproducibility Crisis in Psychology</h2>
 
-<img data-src="images/replication_score.jpg" class="r-stretch quarto-figure-center"><p class="caption">Estimated replication scores by <span class="citation" data-cites="youyou2023">Youyou, Yang, and Uzzi (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p></section>
-<section id="manylabs-studies" class="slide level2">
-<h2>ManyLabs Studies</h2>
+<img data-src="images/replication_score.jpg" class="r-stretch quarto-figure-center"><p class="caption">Estimated replication scores by <span class="citation" data-cites="youyou2023">Youyou, Yang, and Uzzi (<a href="#/references" role="doc-biblioref" onclick="">2023</a>)</span></p><aside class="notes">
+<p>So, it is estimated that less than half of psychology studies of the past 20 years are reproducible. This means that many of the psychological phenomena we learned about are not real or at least much less impactful than the literature might suggest.</p>
+<p>This may be due to many factors, such as publication bias, poor research practices, or from a misunderstanding on p-values.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="albarracin-replication-study" class="slide level2">
+<h2>Albarracin replication study</h2>
 <ul>
-<li>Replication of priming study</li>
+<li><p>Activity <code>priming</code> should lead to better <code>score</code> than inactivity priming</p></li>
+<li><p>Original:</p></li>
+<li><p>Replication by @:</p>
+<ul>
 <li>N = 884</li>
-<li>9 locations / teams</li>
+<li>9 locations &amp; teams</li>
+</ul></li>
 </ul>
+<aside class="notes">
+<p>The Albarracin study investigated the effect of priming on SAT-like test scores. The protocol of the replication study was co-developed by the original authors and was administered to 884 participants across 9 locations and investigations. Distributing participants across different sites allowed for the estimation of effect heterogeneity.</p>
+<p>The effect of interest in this case was the standardised mean difference in scores across the two groups.</p>
+<p>So this replication data is the focus of my study.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="measure-of-relevance" class="slide level2">
 <h2>Measure of Relevance</h2>
 <ul>
-<li>Alternative to p-values by <span class="citation" data-cites="stahel2021">Stahel (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></li>
+<li><p>Alternative to p-values by <span class="citation" data-cites="stahel2021">Stahel (<a href="#/references" role="doc-biblioref" onclick="">2021</a>)</span></p></li>
+<li><p><span class="math inline">\(Rle = \frac{\hat{\theta}}{\zeta}\)</span></p></li>
 </ul>
-<p><span class="math inline">\(Rle = \frac{\hat{\theta}}{\zeta}\)</span></p>
-<div class="quarto-figure quarto-figure-center">
-<figure>
-<p><embed data-src="images/categories.pdf"></p>
-<p></p><figcaption>Relevance Categories</figcaption><p></p>
-</figure>
-</div>
+
+<img data-src="images/categories.png" class="r-stretch quarto-figure-center"><p class="caption">Relevance Categories</p><aside class="notes">
+<p>Let’s talk about this Relevance parameter. So, the parameter was designed by Werner Stahel to be an alternative to p-values. You simply take the parameter of interest, in this case the standardised mean difference between the two groups, and you divide it by the minimally relevant effect size. Relevance ranges now between - infinite and + infinite. With a directed hypothesis a Relevance larger than 1 represents a relevant effect.</p>
+<p>While p-values mostly represent estimation certainty / accuracy, the relevance parameter also encodes information of effect magnitude. The formula in the slide is for the estimated relevance Rle. We can then create a confidence interval around our estimate, with which we can express certainty of our estimation.</p>
+<p>This leads us to the different relevance categorizations: Best case scenario: the CI is to the right of our relevance threshold. Worst case: the upper bound of our CI is negative.</p>
+<p>Mention: units of relevance are in units of minimally relevant effectsize strongly related to equivalence testing problem if expected effect is very close to the minimally relevant effect.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="aim" class="slide level2">
-<h2>Aim</h2>
+<section id="task" class="slide level2">
+<h2>Task</h2>
 <ul>
-<li><p>Implement Relevance measure to ManyLabs studies <!-- but really: write a good thesis --></p></li>
+<li><p>Implement Relevance measure to replication studies <!-- but really: write a good thesis --></p></li>
 <li><p>Create a reproducible and neat analysis pipeline</p>
 <ul>
 <li>Many similar analyses</li>
@@ -506,35 +641,200 @@ Stefan Thoma
 </ul></li>
 <li><p>Build foundation for future research</p></li>
 </ul>
+<aside class="notes">
+<p>My goal was to implement the Relevance measure to replication studies.</p>
+<p>In reality, my goal was to write a good thesis – which I did write in R.</p>
+<p>As many analysis processes are repeated often, and I wanted to avoid duplicate code. This was especially crucial for me during the development where small adjustments would have meant to change code in many places.</p>
+<p>It was also important to me to make the code easily reusable, also by others.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
-<section id="approach" class="slide level2">
-<h2>Approach</h2>
-<ul>
-<li>R Package for reproducibility</li>
-</ul>
+<section id="approach" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Approach</h2>
 <div class="cell">
-
+<div class="sourceCode cell-code" id="cb1" data-code-line-numbers="2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href="#cb1-1"></a><span class="co">#remotes::install_github("StefanThoma/ReplicationRelevance")</span></span>
+<span id="cb1-2" class="hljs-ln-code"><a href="#cb1-2"></a><span class="fu">library</span>(ReplicationRelevance)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-</section>
-<section id="approach-1" class="slide level2">
-<h2>Approach</h2>
 <ul>
-<li></li>
-</ul>
-</section>
-<section id="findings" class="slide level2">
-<h2>Findings</h2>
+<li><p>R Package facilitates</p>
 <ul>
-<li></li>
+<li>documentation</li>
+<li>writing generalized code</li>
+</ul></li>
+<li><p>Can include Data</p></li>
+<li><p>Complete &amp; reproducible data analysis package</p></li>
 </ul>
+<aside class="notes">
+<p>The (maybe) obvious solution was to write an R package that can be hosted on GitHub.</p>
+<p>Writing an R package allowed me to adopt certain R-package standards. This includes writing extensive (roxigen) documentation, thinking about code dependencies,</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="approach-1" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Approach</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2" data-code-line-numbers="4,5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href="#cb2-1"></a><span class="co">#remotes::install_github("StefanThoma/ReplicationRelevance")</span></span>
+<span id="cb2-2" class="hljs-ln-code"><a href="#cb2-2"></a><span class="fu">library</span>(ReplicationRelevance)</span>
+<span id="cb2-3" class="hljs-ln-code"><a href="#cb2-3"></a></span>
+<span id="cb2-4" class="hljs-ln-code"><a href="#cb2-4"></a><span class="co"># S4 study object</span></span>
+<span id="cb2-5" class="hljs-ln-code"><a href="#cb2-5"></a>study <span class="ot">&lt;-</span> <span class="fu">setClass</span>(<span class="st">"study"</span>,</span>
+<span id="cb2-6" class="hljs-ln-code"><a href="#cb2-6"></a>                  <span class="at">slots =</span> <span class="fu">list</span>(</span>
+<span id="cb2-7" class="hljs-ln-code"><a href="#cb2-7"></a>                    <span class="at">name =</span> <span class="st">"character"</span>,</span>
+<span id="cb2-8" class="hljs-ln-code"><a href="#cb2-8"></a>                    <span class="at">manyLabs =</span> <span class="st">"character"</span>,</span>
+<span id="cb2-9" class="hljs-ln-code"><a href="#cb2-9"></a>                    <span class="at">data.revised =</span> <span class="st">"data.frame"</span>,</span>
+<span id="cb2-10" class="hljs-ln-code"><a href="#cb2-10"></a>                    <span class="at">data.replication =</span> <span class="st">"data.frame"</span>,</span>
+<span id="cb2-11" class="hljs-ln-code"><a href="#cb2-11"></a>                    <span class="at">original =</span> <span class="st">"list"</span>,</span>
+<span id="cb2-12" class="hljs-ln-code"><a href="#cb2-12"></a>                    <span class="at">variables =</span> <span class="st">"list"</span>,</span>
+<span id="cb2-13" class="hljs-ln-code"><a href="#cb2-13"></a>                    <span class="at">var.of.interest =</span> <span class="st">"character"</span>,</span>
+<span id="cb2-14" class="hljs-ln-code"><a href="#cb2-14"></a>                    <span class="at">relevance.threshold =</span> <span class="st">"numeric"</span>,</span>
+<span id="cb2-15" class="hljs-ln-code"><a href="#cb2-15"></a>                    <span class="at">family =</span> <span class="st">"character"</span>,</span>
+<span id="cb2-16" class="hljs-ln-code"><a href="#cb2-16"></a>                    <span class="at">mixedModels =</span> <span class="st">"list"</span>,</span>
+<span id="cb2-17" class="hljs-ln-code"><a href="#cb2-17"></a>                    <span class="at">table =</span> <span class="st">"data.frame"</span>,</span>
+<span id="cb2-18" class="hljs-ln-code"><a href="#cb2-18"></a>                    <span class="at">difference.table =</span> <span class="st">"list"</span></span>
+<span id="cb2-19" class="hljs-ln-code"><a href="#cb2-19"></a>                  )</span>
+<span id="cb2-20" class="hljs-ln-code"><a href="#cb2-20"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<aside class="notes">
+<p>My idea was to create one object for each study which will contain both the data and the results. This way, I could run the analysis script, export my study objects, and then import them to my thesis document. This would allow me to write the thesis parallel to developing the functionality in my package:</p>
+<p>I could simply rerun the analysis script and subsequently rerun my thesis script, without any importing adjustments.</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="approach-2" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Approach</h2>
+<div class="sourceCode" id="cb3" data-code-line-numbers="1,2|4,5|10"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb3-1" class="hljs-ln-code"><a href="#cb3-1"></a>alb5 <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"study"</span>, </span>
+<span id="cb3-2" class="hljs-ln-code"><a href="#cb3-2"></a>            <span class="at">name =</span> <span class="st">"alb5"</span>, </span>
+<span id="cb3-3" class="hljs-ln-code"><a href="#cb3-3"></a>            <span class="at">manyLabs =</span> <span class="st">"ml5"</span>,</span>
+<span id="cb3-4" class="hljs-ln-code"><a href="#cb3-4"></a>            <span class="at">data.revised =</span> <span class="fu">as.data.frame</span>(alb5_rev), </span>
+<span id="cb3-5" class="hljs-ln-code"><a href="#cb3-5"></a>            <span class="at">data.replication =</span> <span class="fu">as.data.frame</span>(alb5_rep),</span>
+<span id="cb3-6" class="hljs-ln-code"><a href="#cb3-6"></a>            <span class="at">original =</span> <span class="fu">list</span>(<span class="at">m.1 =</span> <span class="fl">12.83</span>, <span class="at">sd.1 =</span> <span class="fl">1.86</span>, <span class="at">n.1 =</span> <span class="dv">18</span>, </span>
+<span id="cb3-7" class="hljs-ln-code"><a href="#cb3-7"></a>                            <span class="at">m.2 =</span> <span class="fl">10.78</span>, <span class="at">sd.2 =</span> <span class="fl">3.15</span>, <span class="at">n.2 =</span> <span class="dv">18</span>), </span>
+<span id="cb3-8" class="hljs-ln-code"><a href="#cb3-8"></a>            <span class="at">variables =</span> <span class="fu">list</span>(<span class="st">"dv"</span> <span class="ot">=</span> <span class="st">"SATTotal"</span>, </span>
+<span id="cb3-9" class="hljs-ln-code"><a href="#cb3-9"></a>                             <span class="st">"iv"</span> <span class="ot">=</span> <span class="st">"Condition"</span>, </span>
+<span id="cb3-10" class="hljs-ln-code"><a href="#cb3-10"></a>                             <span class="st">"measure"</span> <span class="ot">=</span> <span class="st">"SMD"</span>),</span>
+<span id="cb3-11" class="hljs-ln-code"><a href="#cb3-11"></a>            <span class="at">var.of.interest =</span> <span class="st">"Condition"</span>,</span>
+<span id="cb3-12" class="hljs-ln-code"><a href="#cb3-12"></a>            <span class="at">relevance.threshold =</span> .<span class="dv">1</span>,</span>
+<span id="cb3-13" class="hljs-ln-code"><a href="#cb3-13"></a>            <span class="at">family =</span> <span class="st">"gaussian"</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="approach-3" class="slide level2" data-auto-animate="true">
+<h2 data-id="quarto-animate-title">Approach</h2>
+<div class="sourceCode" id="cb4" data-code-line-numbers="16,17|19,20|22,23"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href="#cb4-1"></a>alb5 <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"study"</span>, </span>
+<span id="cb4-2" class="hljs-ln-code"><a href="#cb4-2"></a>            <span class="at">name =</span> <span class="st">"alb5"</span>, </span>
+<span id="cb4-3" class="hljs-ln-code"><a href="#cb4-3"></a>            <span class="at">manyLabs =</span> <span class="st">"ml5"</span>,</span>
+<span id="cb4-4" class="hljs-ln-code"><a href="#cb4-4"></a>            <span class="at">data.revised =</span> <span class="fu">as.data.frame</span>(alb5_rev), </span>
+<span id="cb4-5" class="hljs-ln-code"><a href="#cb4-5"></a>            <span class="at">data.replication =</span> <span class="fu">as.data.frame</span>(alb5_rep),</span>
+<span id="cb4-6" class="hljs-ln-code"><a href="#cb4-6"></a>            <span class="at">original =</span> <span class="fu">list</span>(<span class="at">m.1 =</span> <span class="fl">12.83</span>, <span class="at">sd.1 =</span> <span class="fl">1.86</span>, <span class="at">n.1 =</span> <span class="dv">18</span>, </span>
+<span id="cb4-7" class="hljs-ln-code"><a href="#cb4-7"></a>                            <span class="at">m.2 =</span> <span class="fl">10.78</span>, <span class="at">sd.2 =</span> <span class="fl">3.15</span>, <span class="at">n.2 =</span> <span class="dv">18</span>), </span>
+<span id="cb4-8" class="hljs-ln-code"><a href="#cb4-8"></a>            <span class="at">variables =</span> <span class="fu">list</span>(<span class="st">"dv"</span> <span class="ot">=</span> <span class="st">"SATTotal"</span>, </span>
+<span id="cb4-9" class="hljs-ln-code"><a href="#cb4-9"></a>                             <span class="st">"iv"</span> <span class="ot">=</span> <span class="st">"Condition"</span>, </span>
+<span id="cb4-10" class="hljs-ln-code"><a href="#cb4-10"></a>                             <span class="st">"measure"</span> <span class="ot">=</span> <span class="st">"SMD"</span>),</span>
+<span id="cb4-11" class="hljs-ln-code"><a href="#cb4-11"></a>            <span class="at">var.of.interest =</span> <span class="st">"Condition"</span>,</span>
+<span id="cb4-12" class="hljs-ln-code"><a href="#cb4-12"></a>            <span class="at">relevance.threshold =</span> .<span class="dv">1</span>,</span>
+<span id="cb4-13" class="hljs-ln-code"><a href="#cb4-13"></a>            <span class="at">family =</span> <span class="st">"gaussian"</span></span>
+<span id="cb4-14" class="hljs-ln-code"><a href="#cb4-14"></a>            </span>
+<span id="cb4-15" class="hljs-ln-code"><a href="#cb4-15"></a><span class="co"># Fit mixed model</span></span>
+<span id="cb4-16" class="hljs-ln-code"><a href="#cb4-16"></a>alb5<span class="sc">@</span>mixedModels <span class="ot">&lt;-</span> <span class="fu">MixedModels.study</span>(alb5)</span>
+<span id="cb4-17" class="hljs-ln-code"><a href="#cb4-17"></a></span>
+<span id="cb4-18" class="hljs-ln-code"><a href="#cb4-18"></a><span class="co"># Check model diagnostics</span></span>
+<span id="cb4-19" class="hljs-ln-code"><a href="#cb4-19"></a><span class="fu">diagnosticPlot.study</span>(alb5)</span>
+<span id="cb4-20" class="hljs-ln-code"><a href="#cb4-20"></a></span>
+<span id="cb4-21" class="hljs-ln-code"><a href="#cb4-21"></a><span class="co"># Create outcome table</span></span>
+<span id="cb4-22" class="hljs-ln-code"><a href="#cb4-22"></a>alb5<span class="sc">@</span>table <span class="ot">&lt;-</span> <span class="fu">relevance_table.study</span>(alb5)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="results" class="slide level2">
+<h2>Results</h2>
+<div class="sourceCode" id="cb5" data-code-line-numbers="24"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>alb5 <span class="ot">&lt;-</span> <span class="fu">new</span>(<span class="st">"study"</span>, </span>
+<span id="cb5-2"><a href="#cb5-2"></a>            <span class="at">name =</span> <span class="st">"alb5"</span>, </span>
+<span id="cb5-3"><a href="#cb5-3"></a>            <span class="at">manyLabs =</span> <span class="st">"ml5"</span>,</span>
+<span id="cb5-4"><a href="#cb5-4"></a>            <span class="at">data.revised =</span> <span class="fu">as.data.frame</span>(alb5_rev), </span>
+<span id="cb5-5"><a href="#cb5-5"></a>            <span class="at">data.replication =</span> <span class="fu">as.data.frame</span>(alb5_rep),</span>
+<span id="cb5-6"><a href="#cb5-6"></a>            <span class="at">original =</span> <span class="fu">list</span>(<span class="at">m.1 =</span> <span class="fl">12.83</span>, <span class="at">sd.1 =</span> <span class="fl">1.86</span>, <span class="at">n.1 =</span> <span class="dv">18</span>, </span>
+<span id="cb5-7"><a href="#cb5-7"></a>                            <span class="at">m.2 =</span> <span class="fl">10.78</span>, <span class="at">sd.2 =</span> <span class="fl">3.15</span>, <span class="at">n.2 =</span> <span class="dv">18</span>), </span>
+<span id="cb5-8"><a href="#cb5-8"></a>            <span class="at">variables =</span> <span class="fu">list</span>(<span class="st">"dv"</span> <span class="ot">=</span> <span class="st">"SATTotal"</span>, </span>
+<span id="cb5-9"><a href="#cb5-9"></a>                             <span class="st">"iv"</span> <span class="ot">=</span> <span class="st">"Condition"</span>, </span>
+<span id="cb5-10"><a href="#cb5-10"></a>                             <span class="st">"measure"</span> <span class="ot">=</span> <span class="st">"SMD"</span>),</span>
+<span id="cb5-11"><a href="#cb5-11"></a>            <span class="at">var.of.interest =</span> <span class="st">"Condition"</span>,</span>
+<span id="cb5-12"><a href="#cb5-12"></a>            <span class="at">relevance.threshold =</span> .<span class="dv">1</span>,</span>
+<span id="cb5-13"><a href="#cb5-13"></a>            <span class="at">family =</span> <span class="st">"gaussian"</span></span>
+<span id="cb5-14"><a href="#cb5-14"></a>            </span>
+<span id="cb5-15"><a href="#cb5-15"></a><span class="co"># Fit mixed model</span></span>
+<span id="cb5-16"><a href="#cb5-16"></a>alb5<span class="sc">@</span>mixedModels <span class="ot">&lt;-</span> <span class="fu">MixedModels.study</span>(alb5)</span>
+<span id="cb5-17"><a href="#cb5-17"></a></span>
+<span id="cb5-18"><a href="#cb5-18"></a><span class="co"># Check model diagnostics</span></span>
+<span id="cb5-19"><a href="#cb5-19"></a><span class="fu">diagnosticPlot.study</span>(alb5)</span>
+<span id="cb5-20"><a href="#cb5-20"></a></span>
+<span id="cb5-21"><a href="#cb5-21"></a><span class="co"># Create outcome table</span></span>
+<span id="cb5-22"><a href="#cb5-22"></a>alb5<span class="sc">@</span>table <span class="ot">&lt;-</span> <span class="fu">relevance_table.study</span>(alb5)</span>
+<span id="cb5-23"><a href="#cb5-23"></a></span>
+<span id="cb5-24"><a href="#cb5-24"></a><span class="fu">plot_both.study</span>(alb5) {auto<span class="sc">-</span>animate<span class="ot">=</span><span class="st">"true"</span>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="results-1" class="slide level2">
+<h2>Results</h2>
+
+<img data-src="images/alb.png" class="r-stretch quarto-figure-center"><p class="caption">Relevance results</p><aside class="notes">
+<p>The statistical model used was a mixed effects model to allow for effect heterogeneity between the different locations.</p>
+<p>As we can see here, the original study showed a high value of its estimated relevance of 7.75. However, this came with a large confidence band. Still, the effect appeared to be relevant.</p>
+<p>Overall, in a traditional setting, the replication would be considered successful because the fixed effect of priming was significant. In my opinion the picture is much less clear. Just one of the nine locations showed a significant effect while none could replicate the relevance of the original study. Further,</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section>
 <section id="my-learning-journey" class="slide level2">
 <h2>My Learning Journey</h2>
 <ul>
+<li><p>Modularize code more</p></li>
 <li><p>Separate Data from Results</p></li>
 <li><p>Don’t reinvent the wheel (use existing code-base)</p></li>
 <li><p>Reduce dependencies</p></li>
 </ul>
+<aside class="notes">
+
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
 </section></section>
 <section id="references" class="title-slide slide level1 smaller scrollable">
 <h1>References</h1>
@@ -770,15 +1070,12 @@ Youyou, Wu, Yang Yang, and Brian Uzzi. 2023. <span>“A Discipline-Wide Investig
       // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
       // slide changes (different for each slide format).
       (function () {
-        // dispatch for htmlwidgets
-        function fireSlideEnter() {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
           const event = window.document.createEvent("Event");
           event.initEvent("slideenter", true, true);
           window.document.dispatchEvent(event);
-        }
-
-        function fireSlideChanged(previousSlide, currentSlide) {
-          fireSlideEnter();
 
           // dispatch for shiny
           if (window.jQuery) {
@@ -789,6 +1086,13 @@ Youyou, Wu, Yang Yang, and Brian Uzzi. 2023. <span>“A Discipline-Wide Investig
               window.jQuery(currentSlide).trigger("shown");
             }
           }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
         }
 
         // hookup for slidy
@@ -840,24 +1144,7 @@ Youyou, Wu, Yang Yang, and Brian Uzzi. 2023. <span>“A Discipline-Wide Investig
         button.classList.add('code-copy-button-checked');
         var currentTitle = button.getAttribute("title");
         button.setAttribute("title", "Copied!");
-        let tooltip;
-        if (window.bootstrap) {
-          button.setAttribute("data-bs-toggle", "tooltip");
-          button.setAttribute("data-bs-placement", "left");
-          button.setAttribute("data-bs-title", "Copied!");
-          tooltip = new bootstrap.Tooltip(button, 
-            { trigger: "manual", 
-              customClass: "code-copy-button-tooltip",
-              offset: [0, -8]});
-          tooltip.show();    
-        }
         setTimeout(function() {
-          if (tooltip) {
-            tooltip.hide();
-            button.removeAttribute("data-bs-title");
-            button.removeAttribute("data-bs-toggle");
-            button.removeAttribute("data-bs-placement");
-          }
           button.setAttribute("title", currentTitle);
           button.classList.remove('code-copy-button-checked');
         }, 1000);
@@ -895,42 +1182,24 @@ Youyou, Wu, Yang Yang, and Brian Uzzi. 2023. <span>“A Discipline-Wide Investig
           return note.innerHTML;
         });
       }
-      const findCites = (el) => {
-        const parentEl = el.parentElement;
-        if (parentEl) {
-          const cites = parentEl.dataset.cites;
-          if (cites) {
-            return {
-              el,
-              cites: cites.split(' ')
-            };
-          } else {
-            return findCites(el.parentElement)
-          }
-        } else {
-          return undefined;
-        }
-      };
       var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
       for (var i=0; i<bibliorefs.length; i++) {
         const ref = bibliorefs[i];
-        const citeInfo = findCites(ref);
-        if (citeInfo) {
-          tippyHover(citeInfo.el, function() {
-            var popup = window.document.createElement('div');
-            citeInfo.cites.forEach(function(cite) {
-              var citeDiv = window.document.createElement('div');
-              citeDiv.classList.add('hanging-indent');
-              citeDiv.classList.add('csl-entry');
-              var biblioDiv = window.document.getElementById('ref-' + cite);
-              if (biblioDiv) {
-                citeDiv.innerHTML = biblioDiv.innerHTML;
-              }
-              popup.appendChild(citeDiv);
-            });
-            return popup.innerHTML;
+        const cites = ref.parentNode.getAttribute('data-cites').split(' ');
+        tippyHover(ref, function() {
+          var popup = window.document.createElement('div');
+          cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
           });
-        }
+          return popup.innerHTML;
+        });
       }
     });
     </script>
