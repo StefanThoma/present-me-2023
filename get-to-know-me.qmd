@@ -125,44 +125,41 @@ Today, I will be focusing on one particular replication study -- for the sake of
 
 In particular, I want to talk about how I implemented this analysis and what I would do differently now.
 
-But first, I want to give you a little bit of background:
-
-
 :::
 
-## Reproducibility Crisis in Psychology
+<!-- ## Reproducibility Crisis in Psychology -->
 
-![Estimated replication scores by @youyou2023](images/replication_score.jpg)
+<!-- ![Estimated replication scores by @youyou2023](images/replication_score.jpg) -->
 
-::: notes
-So, it is estimated that less than half of psychology studies of the past 20 years are reproducible.
-This means that many of the psychological phenomena we learned about are not real or at least much less impactful than the literature might suggest. 
+<!-- ::: notes -->
+<!-- So, it is estimated that less than half of psychology studies of the past 20 years are reproducible. -->
+<!-- This means that many of the psychological phenomena we learned about are not real or at least much less impactful than the literature might suggest.  -->
 
-This may be due to many factors, such as publication bias, poor research practices, or from a misunderstanding on p-values. 
+<!-- This may be due to many factors, such as publication bias, poor research practices, or from a misunderstanding on p-values.  -->
 
-::: 
+<!-- :::  -->
 
-## Albarracin replication study
+<!-- ## Albarracin replication study -->
 
-- Activity `priming` should lead to better `score` than inactivity priming
+<!-- - Activity `priming` should lead to better `score` than inactivity priming -->
 
-- Original: 
+<!-- - Original:  -->
 
-- Replication by @:
-  - N = 884
-  - 9 locations & teams
+<!-- - Replication by @: -->
+<!--   - N = 884 -->
+<!--   - 9 locations & teams -->
 
-::: notes
+<!-- ::: notes -->
 
-The Albarracin study investigated the effect of priming on SAT-like test scores. 
-The protocol of the replication study was co-developed by the original authors and was administered to 884 participants across 9 locations and investigations.
-Distributing participants across different sites allowed for the estimation of effect heterogeneity. 
+<!-- The Albarracin study investigated the effect of priming on SAT-like test scores.  -->
+<!-- The protocol of the replication study was co-developed by the original authors and was administered to 884 participants across 9 locations and investigations. -->
+<!-- Distributing participants across different sites allowed for the estimation of effect heterogeneity.  -->
 
-The effect of interest in this case was the standardised mean difference in scores across the two groups. 
+<!-- The effect of interest in this case was the standardised mean difference in scores across the two groups.  -->
 
-So this replication data is the focus of my study.
+<!-- So this replication data is the focus of my study. -->
 
-:::
+<!-- ::: -->
 
 ## Measure of Relevance
 
@@ -193,9 +190,20 @@ units of relevance are in units of minimally relevant effectsize
 strongly related to equivalence testing
 problem if expected effect is very close to the minimally relevant effect.
 
-For this study zeta was .1
+For this study $\zeta$ was .1
 :::
 
+## Measure of Relevance
+
+- $\zeta$ must be decided on
+- Defaults are useful: 
+  - For our study: $\zeta = 0.1$
+  - $\hat{\theta} = 0.2 -> Rle = 2$
+  
+::: notes
+note here that the choice of zeta has a large impact on the results.
+Zeta must be chosen by researcher, but some default values can be suggested.
+:::
 
 ## Task
 
@@ -360,7 +368,7 @@ diagnosticPlot.study(alb5)
 # Create outcome table
 alb5@table <- relevance_table.study(alb5)
 
-plot_both.study(alb5) {auto-animate="true"}
+plot_both.study(alb5)
 ```
 
 ## Results
