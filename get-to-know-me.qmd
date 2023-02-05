@@ -21,7 +21,16 @@ leaflet() %>%
 
 ## Family {auto-animate="true"}
 
+::: columns
+::: {.column width="50%"}
 ![](images/Stefan&Leo.JPG)
+:::
+
+::: {.column width="50%"}
+
+![](images/2d6252d1-d385-4995-8fe1-22295348619a.jpg)
+:::
+:::
 
 ## Free Time
 
@@ -77,7 +86,6 @@ leaflet() %>%
 ## At Roche
 
 ::: columns
-
 ::: {.column width="50%"}
 <!--     -   Ease the switch from SAS to R -->
 
@@ -93,30 +101,31 @@ leaflet() %>%
 :::
 
 ::: {.column width="50%"}
-
 ::: panel-tabset
-
 ### App
 
-<iframe src="https://zxqguo-stefan0pascal-thoma.shinyapps.io/data_upload/" title="Admiral Hackathon App" width="960" height="500"></iframe>
+<iframe src="https://zxqguo-stefan0pascal-thoma.shinyapps.io/data_upload/" title="Admiral Hackathon App" width="960" height="500">
 
+</iframe>
 
 ### SAS to R
-<iframe src="https://pharmaverse.github.io/intro-to-r-for-sas-programmers-workshop/" title="SAS to R" width="960" height="500"></iframe>
 
+<iframe src="https://pharmaverse.github.io/intro-to-r-for-sas-programmers-workshop/" title="SAS to R" width="960" height="500">
+
+</iframe>
 :::
 :::
 :::
 
 ## Why ADS?
 
-- Work with Substance <!-- Being part of the drug development process is very meaningful to me personally. -->
-- Work as part of a team towards a shared goal <!-- Not how it is in academia -->
-- Switch to R
+-   Work with Substance <!-- Being part of the drug development process is very meaningful to me personally. -->
+-   Work as part of a team towards a shared goal <!-- Not how it is in academia -->
+-   Switch to R
     -   Low barrier of entry
     -   Co create workflows and environments
     -   Contribute to the shift in this industry
-- Personal growth
+-   Personal growth
 
 ::: notes
 Broadly speaking there are three points:
@@ -191,11 +200,11 @@ note here that the choice of zeta has a large impact on the results. Zeta must b
 
 <!-- :::  -->
 
-## Priming study by @albarracin2008
+## Priming study by @albarracín2008
 
 -   Activity `priming` should lead to better `score` than inactivity priming
 
--   Replication by @ebersole2018:
+-   Replication by @ebersole2020:
 
     -   N = 884
     -   9 locations & teams
@@ -383,6 +392,8 @@ Overall, in a traditional setting, the replication would be considered successfu
 -   Modularize code more
 
 -   Separate Data from Results
+
+-   Contribute to an existing package
 
 -   Don't reinvent the wheel (use existing code-base)
 
