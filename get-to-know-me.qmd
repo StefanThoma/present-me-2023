@@ -67,7 +67,7 @@ leaflet() %>%
 
 ### R & Stats
 
-<iframe src="https://methodenlehre.github.io/intro-to-rstats-hs21/" title="*Statistik IV* lecture material" width="960" height="500">
+<iframe src="https://methodenlehre.github.io/intro-to-rstats-hs21/" title="*Intro to R* lecture material" width="960" height="500">
 
 </iframe>
 :::
@@ -77,7 +77,6 @@ leaflet() %>%
 ## At Roche
 
 ::: columns
-
 ::: {.column width="50%"}
 <!--     -   Ease the switch from SAS to R -->
 
@@ -93,30 +92,39 @@ leaflet() %>%
 :::
 
 ::: {.column width="50%"}
-
 ::: panel-tabset
-
 ### App
 
-<iframe src="https://zxqguo-stefan0pascal-thoma.shinyapps.io/data_upload/" title="Admiral Hackathon App" width="960" height="500"></iframe>
+<iframe src="https://zxqguo-stefan0pascal-thoma.shinyapps.io/data_upload/" title="Admiral Hackathon App" width="960" height="500">
 
+</iframe>
 
 ### SAS to R
-<iframe src="https://pharmaverse.github.io/intro-to-r-for-sas-programmers-workshop/" title="SAS to R" width="960" height="500"></iframe>
 
+<iframe src="https://pharmaverse.github.io/intro-to-r-for-sas-programmers-workshop/" title="Introduction to R for SAS programmers" width="960" height="500">
+
+</iframe>
+
+### `teal`
+
+<iframe src="https://stefanthoma.github.io/teal_intro/" title="Introduction to teal" width="960" height="500">
+
+</iframe>
 :::
 :::
 :::
 
 ## Why ADS?
 
-- Work with Substance <!-- Being part of the drug development process is very meaningful to me personally. -->
-- Work as part of a team towards a shared goal <!-- Not how it is in academia -->
-- Switch to R
+-   Work with Substance <!-- Being part of the drug development process is very meaningful to me personally. -->
+-   Work as part of a team towards a shared goal <!-- Not how it is in academia -->
+-   Switch to R
     -   Low barrier of entry
+    -   Focus on code re-usability
     -   Co create workflows and environments
     -   Contribute to the shift in this industry
-- Personal growth
+    -   
+-   Personal growth
 
 ::: notes
 Broadly speaking there are three points:
@@ -150,6 +158,8 @@ In particular, I want to talk about how I implemented this analysis and what I w
 
 -   Alternative to p-values by @stahel2021
 
+    -   Testing against Null vs testing Relevance
+
 -   $Rle = \frac{\hat{\theta}}{\zeta}$
 
 ![Relevance Categories](images/categories.png)
@@ -171,7 +181,7 @@ For this study $\zeta$ was .1
 -   $\zeta$ must be decided on
 -   Defaults are useful:
     -   For our study: $\zeta = 0.1$
-    -   $\hat{\theta} = 0.2 -> Rle = 2$
+    -   $\hat{\theta} = 0.2$ -\> $Rle = 2$
 
 ::: notes
 note here that the choice of zeta has a large impact on the results. Zeta must be chosen by researcher, but some default values can be suggested.
@@ -363,19 +373,19 @@ diagnosticPlot.study(alb5)
 # Create outcome table
 alb5@table <- relevance_table.study(alb5)
 
-plot_both.study(alb5)
+plot_estimates.study(alb5)
 ```
 
 ## Results
 
-![Relevance results](images/alb.png)
+![Relevance results](images/alb_both_plot.png)
 
 ::: notes
-The statistical model used was a mixed effects model to allow for effect heterogeneity between the different locations.
-
 As we can see here, the original study showed a high value of its estimated relevance of 7.75. However, this came with a large confidence band. Still, the effect appeared to be relevant.
 
 Overall, in a traditional setting, the replication would be considered successful because the fixed effect of priming was significant. In my opinion the picture is much less clear. Just one of the nine locations showed a significant effect while none could replicate the relevance of the original study. Further,
+
+-- What is a successful replication??
 :::
 
 ## My Learning Journey
@@ -386,7 +396,9 @@ Overall, in a traditional setting, the replication would be considered successfu
 
 -   Don't reinvent the wheel (use existing code-base)
 
--   Reduce dependencies
+-   Reduce unnecessary dependencies
+
+-   Use CICD & tests
 
 ::: notes
 --- Interface
@@ -397,7 +409,16 @@ Overall, in a traditional setting, the replication would be considered successfu
 
 Avoid unstable packages, especially for core functionality.
 
-Don't let the core
+Don't let the core functionality depend on unstable/very new packages
 :::
 
 # References
+
+::: {#refs}
+:::
+
+# Excluded slides
+
+## Both results
+
+![Relevance results](images/alb.png)
