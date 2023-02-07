@@ -33,7 +33,7 @@ leaflet() %>%
 
 ## Free Time
 
-![](images/table.png){.absolute top="0" right="0"}
+![](images/table.jpg){.absolute top="0" right="0"}
 
 -   Woodworking & Woodturning
 
@@ -51,7 +51,7 @@ leaflet() %>%
 
 -   MSc Cognitive Psychology & Methods in Bern
     -   Increasing awareness of climate change with immersive virtual reality @thoma2023.
-    -   Accepted January 2023 in Frontiers in Psychology \| Frontiers in Virtual Reality
+    -   Accepted January 2023 in Frontiers in Psychology \| Frontiers in Virtual Reality
 -   MSc Statistics at ETHZ (December 2021)
     -   Estimating Relevance in Replication Studies
 
