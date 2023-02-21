@@ -71,7 +71,7 @@ leaflet() %>%
 ::: panel-tabset
 ### Statistik IV
 
-<iframe src="https://methodenlehre.github.io/Statistik-IV-quarto/" title="*Statistik IV* lecture material" width="960" height="500">
+<iframe src="https://methodenlehre.github.io/statistik-IV/" title="*Statistik IV* lecture material" width="960" height="500">
 
 </iframe>
 
